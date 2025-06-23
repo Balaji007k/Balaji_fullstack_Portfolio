@@ -49,14 +49,26 @@ const FloatingSphere = ({ position }: { position: [number, number, number] }) =>
 
 export const Scene3D = () => {
   return (
-    <div className="w-full h-full">
-      <Canvas camera={{ position: [0, 0, 5] }}>
+    <div className="w-full h-full overflow-hidden">
+      <Canvas 
+        camera={{ position: [0, 0, 5] }}
+        style={{ width: '100%', height: '100%' }}
+        dpr={[1, 2]}
+        gl={{ antialias: true, alpha: true }}
+      >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <FloatingCube />
         <FloatingSphere position={[-2, 1, 0]} />
         <FloatingSphere position={[2, -1, 0]} />
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+        <OrbitControls 
+          enableZoom={false} 
+          autoRotate 
+          autoRotateSpeed={0.5}
+          enablePan={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
       </Canvas>
     </div>
   );

@@ -23,18 +23,18 @@ export const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 p-4 lg:p-6">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
+      <nav className="fixed top-0 left-0 right-0 z-50 p-6">
+        <div className="flex justify-between items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             Portfolio
           </motion.div>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 xl:space-x-8 overflow-x-auto">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.path}
@@ -44,7 +44,7 @@ export const Navigation = () => {
               >
                 <Link
                   to={item.path}
-                  className={`relative px-3 xl:px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap text-sm xl:text-base ${
+                  className={`relative px-4 py-2 rounded-full transition-all duration-300 ${
                     location.pathname === item.path
                       ? "bg-blue-500/20 text-blue-400"
                       : "hover:bg-white/10 text-gray-300 hover:text-white"
@@ -66,7 +66,7 @@ export const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm"
+            className="md:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -79,9 +79,9 @@ export const Navigation = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="lg:hidden mt-4 p-4 lg:p-6 bg-black/50 backdrop-blur-lg rounded-2xl max-w-7xl mx-auto"
+              className="md:hidden mt-4 p-6 bg-black/50 backdrop-blur-lg rounded-2xl"
             >
-              <div className="grid grid-cols-2 gap-3 max-h-96 overflow-y-auto">
+              <div className="grid grid-cols-2 gap-4">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.path}
@@ -92,7 +92,7 @@ export const Navigation = () => {
                     <Link
                       to={item.path}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-3 py-2 lg:py-3 rounded-lg text-center transition-all duration-300 text-sm ${
+                      className={`block px-4 py-3 rounded-lg text-center transition-all duration-300 ${
                         location.pathname === item.path
                           ? "bg-blue-500/20 text-blue-400"
                           : "hover:bg-white/10 text-gray-300 hover:text-white"

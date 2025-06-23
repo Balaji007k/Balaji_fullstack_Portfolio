@@ -104,7 +104,7 @@ const Articles = () => {
                     whileHover={{ x: 5 }}
                   >
                     Read more →
-                  </span>
+                  </motion.span>
                 </motion.div>
               </div>
             </motion.article>

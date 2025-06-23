@@ -1,20 +1,19 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Float, OrbitControls } from "@react-three/drei";
-import { motion } from "framer-motion-3d";
+import { useRef } from "react";
+import { Mesh } from "three";
 
 const FloatingCube = () => {
+  const meshRef = useRef<Mesh>(null);
+
   return (
     <Float
       speed={1.4}
       rotationIntensity={1}
       floatIntensity={2}
     >
-      <motion.mesh
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
+      <mesh ref={meshRef}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial
           color="#3B82F6"
@@ -22,31 +21,28 @@ const FloatingCube = () => {
           opacity={0.8}
           wireframe
         />
-      </motion.mesh>
+      </mesh>
     </Float>
   );
 };
 
 const FloatingSphere = ({ position }: { position: [number, number, number] }) => {
+  const meshRef = useRef<Mesh>(null);
+
   return (
     <Float
       speed={2}
       rotationIntensity={0.5}
       floatIntensity={1}
     >
-      <motion.mesh
-        position={position}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
+      <mesh ref={meshRef} position={position}>
         <sphereGeometry args={[0.5, 16, 16]} />
         <meshStandardMaterial
           color="#8B5CF6"
           transparent
           opacity={0.6}
         />
-      </motion.mesh>
+      </mesh>
     </Float>
   );
 };

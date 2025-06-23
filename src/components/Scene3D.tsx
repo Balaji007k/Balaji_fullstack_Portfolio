@@ -2,10 +2,10 @@
 import { Canvas } from "@react-three/fiber";
 import { Float, OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
-import { Mesh } from "three";
+import * as THREE from "three";
 
 const FloatingCube = () => {
-  const meshRef = useRef<Mesh>(null);
+  const meshRef = useRef<THREE.Mesh>(null);
 
   return (
     <Float
@@ -27,7 +27,7 @@ const FloatingCube = () => {
 };
 
 const FloatingSphere = ({ position }: { position: [number, number, number] }) => {
-  const meshRef = useRef<Mesh>(null);
+  const meshRef = useRef<THREE.Mesh>(null);
 
   return (
     <Float

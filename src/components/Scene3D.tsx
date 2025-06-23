@@ -4,20 +4,6 @@ import { Float, OrbitControls } from "@react-three/drei";
 import { useRef } from "react";
 import { Mesh } from "three";
 
-// Extend JSX namespace for Three.js elements
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      mesh: any;
-      boxGeometry: any;
-      sphereGeometry: any;
-      meshStandardMaterial: any;
-      ambientLight: any;
-      pointLight: any;
-    }
-  }
-}
-
 const FloatingCube = () => {
   const meshRef = useRef<Mesh>(null);
 

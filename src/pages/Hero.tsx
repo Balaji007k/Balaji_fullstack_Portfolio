@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
 import { Scene3D } from "../components/Scene3D";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -34,7 +35,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 leading-relaxed"
             >
-              Crafting digital experiences with cutting-edge technology and creative design
+              Crafting digital experiences with cutting-edge technology and creative design. 
+              Specializing in React, TypeScript, and modern web development.
             </motion.p>
 
             <motion.div
@@ -43,21 +45,58 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-wrap gap-4"
             >
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-              >
-                View My Work
-              </motion.button>
+              <Link to="/projects">
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center"
+                >
+                  View My Work
+                  <ArrowDown className="ml-2 w-4 h-4 rotate-[-90deg]" />
+                </motion.button>
+              </Link>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white/20 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300"
+              <Link to="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-white/20 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 flex items-center"
+                >
+                  <Mail className="mr-2 w-4 h-4" />
+                  Get In Touch
+                </motion.button>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="flex items-center space-x-6 pt-4"
+            >
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300"
               >
-                Get In Touch
-              </motion.button>
+                <Github className="w-6 h-6 text-white" />
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300"
+              >
+                <Linkedin className="w-6 h-6 text-white" />
+              </motion.a>
+              <Link to="/resume">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-white font-medium hover:shadow-lg transition-all duration-300"
+                >
+                  <Download className="mr-2 w-4 h-4" />
+                  Resume
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 

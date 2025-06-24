@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
 import { ResponsiveSection } from "../components/ResponsiveSection";
-import { Scene3D } from "../components/Scene3D";
 import { ArrowDown, Download, Mail, Github, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -13,12 +12,12 @@ const Hero = () => {
         fullHeight 
         className="pt-0 flex items-center justify-center min-h-screen max-h-screen overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full h-full py-20">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full h-full py-16 lg:py-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 lg:space-y-8 order-2 lg:order-1 flex flex-col justify-center"
+            className="space-y-4 lg:space-y-8 order-2 lg:order-1 flex flex-col justify-center px-2 sm:px-0"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -26,41 +25,42 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="relative inline-block">
-                  <span 
-                    className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-400 bg-clip-text text-transparent blur-sm"
-                    style={{ transform: 'translate(2px, 2px)' }}
-                  >
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-center lg:text-left">
+                <motion.span 
+                  className="relative inline-block mb-2 lg:mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  <span className="relative bg-gradient-to-br from-white to-slate-200 bg-clip-text text-transparent">
                     Creative
                   </span>
-                  <span className="relative bg-gradient-to-br from-white to-slate-200 bg-clip-text text-transparent shadow-2xl">
-                    Creative
-                  </span>
-                </span>
+                </motion.span>
                 <br />
-                <span className="relative inline-block mt-2">
-                  <span 
-                    className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-transparent blur-sm"
-                    style={{ transform: 'translate(2px, 2px)' }}
-                  >
-                    Developer
-                  </span>
-                  <span className="relative bg-gradient-to-br from-slate-100 to-slate-300 bg-clip-text text-transparent">
-                    Developer
-                  </span>
-                </span>
+                <motion.span 
+                  className="relative inline-block animate-shimmer-text"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  style={{
+                    background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #3b82f6)',
+                    backgroundSize: '300% 300%',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    animation: 'gradient-shift 3s ease-in-out infinite'
+                  }}
+                >
+                  Developer
+                </motion.span>
               </h1>
             </motion.div>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl relative"
-              style={{
-                textShadow: '0 2px 4px rgba(0,0,0,0.3)'
-              }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl text-center lg:text-left px-2 sm:px-0"
+              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
             >
               Crafting digital experiences with cutting-edge technology and creative design. 
               Specializing in React, TypeScript, and modern web development.
@@ -69,39 +69,31 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4"
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start px-2 sm:px-0"
             >
-              <Link to="/projects">
+              <Link to="/projects" className="w-full sm:w-auto">
                 <motion.button
-                  whileHover={{ 
-                    scale: 1.02, 
-                    y: -2,
-                    boxShadow: "0 25px 50px rgba(0,0,0,0.4)" 
-                  }}
-                  whileTap={{ scale: 0.98, y: 0 }}
-                  className="w-full sm:w-auto px-8 py-4 relative overflow-hidden rounded-2xl text-white font-semibold transition-all duration-300 flex items-center justify-center group"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full sm:w-auto px-6 lg:px-8 py-3 lg:py-4 relative overflow-hidden rounded-2xl text-white font-semibold transition-all duration-300 flex items-center justify-center group"
                   style={{
                     background: 'linear-gradient(145deg, #334155, #1e293b)',
                     boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
                     border: '1px solid rgba(255,255,255,0.1)'
                   }}
                 >
-                  <span className="relative z-10">View My Work</span>
+                  <span className="relative z-10 text-sm lg:text-base">View My Work</span>
                   <ArrowDown className="ml-2 w-4 h-4 rotate-[-90deg] relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-r from-slate-600/20 to-slate-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
               </Link>
               
-              <Link to="/contact">
+              <Link to="/contact" className="w-full sm:w-auto">
                 <motion.button
-                  whileHover={{ 
-                    scale: 1.02, 
-                    y: -2,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.3)" 
-                  }}
-                  whileTap={{ scale: 0.98, y: 0 }}
-                  className="w-full sm:w-auto px-8 py-4 rounded-2xl text-white font-semibold transition-all duration-300 flex items-center justify-center group relative overflow-hidden"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full sm:w-auto px-6 lg:px-8 py-3 lg:py-4 rounded-2xl text-white font-semibold transition-all duration-300 flex items-center justify-center group relative overflow-hidden"
                   style={{
                     background: 'linear-gradient(145deg, #1e293b, #0f172a)',
                     boxShadow: '0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05)',
@@ -109,7 +101,7 @@ const Hero = () => {
                   }}
                 >
                   <Mail className="mr-2 w-4 h-4 relative z-10" />
-                  <span className="relative z-10">Get In Touch</span>
+                  <span className="relative z-10 text-sm lg:text-base">Get In Touch</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
               </Link>
@@ -118,14 +110,14 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="flex items-center justify-center sm:justify-start space-x-4 lg:space-x-6 pt-4"
+              transition={{ duration: 0.8, delay: 1.4 }}
+              className="flex items-center justify-center lg:justify-start space-x-3 lg:space-x-4 pt-2 lg:pt-4 px-2 sm:px-0"
             >
               <motion.a
                 href="#"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-4 rounded-2xl text-white transition-all duration-300 relative overflow-hidden group"
+                className="p-3 lg:p-4 rounded-2xl text-white transition-all duration-300 relative overflow-hidden group"
                 style={{
                   background: 'linear-gradient(145deg, #374151, #1f2937)',
                   boxShadow: '0 8px 25px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
@@ -139,7 +131,7 @@ const Hero = () => {
                 href="#"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="p-4 rounded-2xl text-white transition-all duration-300 relative overflow-hidden group"
+                className="p-3 lg:p-4 rounded-2xl text-white transition-all duration-300 relative overflow-hidden group"
                 style={{
                   background: 'linear-gradient(145deg, #374151, #1f2937)',
                   boxShadow: '0 8px 25px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
@@ -153,7 +145,7 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center px-6 py-3 rounded-2xl text-white font-medium transition-all duration-300 relative overflow-hidden group"
+                  className="flex items-center px-4 lg:px-6 py-2.5 lg:py-3 rounded-2xl text-white font-medium transition-all duration-300 relative overflow-hidden group"
                   style={{
                     background: 'linear-gradient(145deg, #059669, #047857)',
                     boxShadow: '0 8px 25px rgba(5,150,105,0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
@@ -161,7 +153,7 @@ const Hero = () => {
                   }}
                 >
                   <Download className="mr-2 w-4 h-4 relative z-10" />
-                  <span className="relative z-10">Resume</span>
+                  <span className="relative z-10 text-sm lg:text-base">Resume</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-green-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
               </Link>
@@ -172,24 +164,49 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="h-64 sm:h-80 lg:h-96 xl:h-[500px] relative order-1 lg:order-2 w-full flex items-center justify-center"
+            className="h-48 sm:h-64 lg:h-80 xl:h-96 relative order-1 lg:order-2 w-full flex items-center justify-center mx-auto max-w-md lg:max-w-none"
           >
+            {/* Glassy blurred background */}
             <div 
-              className="absolute inset-4 rounded-3xl opacity-50"
+              className="w-full h-full rounded-3xl relative overflow-hidden glass-morphism"
               style={{
-                background: 'linear-gradient(145deg, #1e293b, #0f172a)',
-                filter: 'blur(20px)'
-              }}
-            ></div>
-            <div 
-              className="w-full h-full rounded-3xl relative overflow-hidden"
-              style={{
-                background: 'linear-gradient(145deg, #1e293b, #0f172a)',
-                boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+                backdropFilter: 'blur(20px) saturate(180%)',
+                boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)',
                 border: '1px solid rgba(255,255,255,0.1)'
               }}
             >
-              <Scene3D />
+              {/* Floating particles effect */}
+              <div className="absolute inset-0 overflow-hidden">
+                {[...Array(12)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                    }}
+                    animate={{
+                      y: [0, -20, 0],
+                      opacity: [0.2, 0.6, 0.2],
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                    }}
+                  />
+                ))}
+              </div>
+              
+              {/* Center glow effect */}
+              <div 
+                className="absolute inset-0 rounded-3xl opacity-30"
+                style={{
+                  background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.3), rgba(147, 51, 234, 0.2), transparent 70%)'
+                }}
+              />
             </div>
           </motion.div>
         </div>

@@ -94,7 +94,6 @@
   html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    /* Enhanced smooth scrolling for better performance */
     scroll-padding-top: 80px;
   }
 
@@ -104,20 +103,17 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-    /* Performance optimizations */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  /* Prevent horizontal scroll */
   #root {
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
   }
 
-  /* Enhanced scrollbar with elegant styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -139,20 +135,17 @@
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
   }
 
-  /* Responsive typography with improved readability */
   h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
     hyphens: auto;
     line-height: 1.2;
   }
 
-  /* Ensure images and media don't overflow */
   img, video, canvas {
     max-width: 100%;
     height: auto;
   }
 
-  /* Focus styles for accessibility */
   *:focus-visible {
     outline: 2px solid rgba(59, 130, 246, 0.8);
     outline-offset: 2px;
@@ -161,6 +154,15 @@
 }
 
 /* Enhanced animations with performance optimizations */
+@keyframes gradient-shift {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
 @keyframes float-3d {
   0%, 100% { 
     transform: translate3d(0, 0px, 0) rotateX(0deg);
@@ -222,6 +224,11 @@
   animation: shimmer 2s infinite;
 }
 
+.animate-shimmer-text {
+  animation: gradient-shift 3s ease-in-out infinite;
+  will-change: background-position;
+}
+
 /* Modern glass morphism with enhanced depth */
 .glass-3d {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
@@ -230,6 +237,11 @@
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-morphism {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 /* Enhanced shadow system */
@@ -341,13 +353,11 @@
     font-size: clamp(1.5rem, 6vw, 3rem);
   }
 
-  /* GPU acceleration for smooth animations */
   .gpu-accelerated {
     transform: translateZ(0);
     will-change: transform;
   }
 
-  /* Optimized transitions */
   .transition-smooth {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -357,12 +367,32 @@
   }
 }
 
-/* Media queries for enhanced responsiveness */
+/* Mobile responsiveness improvements */
 @media (max-width: 768px) {
   .text-3d, .text-3d-lg {
     text-shadow: 
       0 1px 0 rgba(0, 0, 0, 0.3),
       0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Optimize animations for mobile */
+  .animate-shimmer-text {
+    animation-duration: 4s;
+  }
+  
+  .glass-morphism {
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+  }
+}
+
+@media (max-width: 640px) {
+  /* Further mobile optimizations */
+  .shadow-3d-lg {
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.25),
+      0 5px 15px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 }
 

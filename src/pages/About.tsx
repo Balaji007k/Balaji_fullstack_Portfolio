@@ -32,7 +32,7 @@ const About = () => {
   return (
     <PageTransition>
       <ResponsiveSection className="pt-16 lg:pt-20 pb-8 lg:pb-12">
-        <div className="space-y-8 lg:space-y-16 px-4 sm:px-6 lg:px-8">
+        <div className="space-y-8 lg:space-y-16 px-2 sm:px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto"
+              className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto px-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -83,7 +83,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
-            className="relative rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 space-y-6 lg:space-y-8 w-full overflow-hidden mx-auto max-w-5xl"
+            className="relative rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-12 space-y-6 lg:space-y-8 w-full overflow-hidden mx-auto max-w-6xl"
             style={{
               background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9))',
               backdropFilter: 'blur(20px)',
@@ -99,7 +99,7 @@ const About = () => {
             />
             
             <motion.h2 
-              className="text-xl sm:text-2xl lg:text-3xl font-bold text-white relative z-10"
+              className="text-xl sm:text-2xl lg:text-3xl font-bold text-white relative z-10 px-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
@@ -108,7 +108,7 @@ const About = () => {
               My Journey
             </motion.h2>
             
-            <div className="space-y-4 lg:space-y-6 text-slate-300 leading-relaxed relative z-10">
+            <div className="space-y-4 lg:space-y-6 text-slate-300 leading-relaxed relative z-10 px-2">
               <motion.p 
                 className="text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.6 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-6 max-w-6xl mx-auto px-1 sm:px-2"
           >
             {achievements.map((achievement, index) => (
               <motion.div
@@ -143,8 +143,8 @@ const About = () => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 2.8 + index * 0.1 }}
                 whileHover={{ 
-                  scale: 1.05, 
-                  y: -5,
+                  scale: 1.02, 
+                  y: -2,
                   boxShadow: "0 25px 50px rgba(0,0,0,0.4)"
                 }}
                 className="text-center p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl w-full overflow-hidden relative group cursor-pointer"
@@ -165,7 +165,7 @@ const About = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 3.0 + index * 0.1 }}
-                  className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-1 lg:mb-2 relative z-10"
+                  className="text-lg sm:text-xl lg:text-3xl xl:text-4xl font-bold mb-1 lg:mb-2 relative z-10"
                   style={{
                     background: 'linear-gradient(135deg, #e2e8f0, #94a3b8)',
                     WebkitBackgroundClip: 'text',
@@ -176,7 +176,7 @@ const About = () => {
                   {achievement.number}
                 </motion.div>
                 <div 
-                  className="text-slate-400 text-xs sm:text-sm lg:text-base relative z-10"
+                  className="text-slate-400 text-xs sm:text-sm lg:text-base relative z-10 leading-tight"
                   style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
                 >
                   {achievement.label}

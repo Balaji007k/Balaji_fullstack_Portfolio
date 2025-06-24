@@ -166,7 +166,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="h-48 sm:h-64 lg:h-80 xl:h-96 relative order-1 lg:order-2 w-full flex items-center justify-center mx-auto max-w-md lg:max-w-none"
           >
-            {/* Glassy blurred background */}
+            {/* Main glassy background container */}
             <div 
               className="w-full h-full rounded-3xl relative overflow-hidden glass-morphism"
               style={{
@@ -176,35 +176,109 @@ const Hero = () => {
                 border: '1px solid rgba(255,255,255,0.1)'
               }}
             >
-              {/* Floating particles effect */}
-              <div className="absolute inset-0 overflow-hidden">
-                {[...Array(12)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                    animate={{
-                      y: [0, -20, 0],
-                      opacity: [0.2, 0.6, 0.2],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 3 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 2,
-                    }}
-                  />
-                ))}
-              </div>
+              {/* Floating 3D orbs */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={`orb-${i}`}
+                  className="absolute rounded-full opacity-60"
+                  style={{
+                    width: `${20 + Math.random() * 40}px`,
+                    height: `${20 + Math.random() * 40}px`,
+                    left: `${Math.random() * 80 + 10}%`,
+                    top: `${Math.random() * 80 + 10}%`,
+                    background: `radial-gradient(circle, ${
+                      ['rgba(59, 130, 246, 0.6)', 'rgba(147, 51, 234, 0.6)', 'rgba(6, 182, 212, 0.6)', 'rgba(16, 185, 129, 0.6)'][i % 4]
+                    }, transparent 70%)`,
+                    filter: 'blur(1px)',
+                    boxShadow: `0 0 20px ${
+                      ['rgba(59, 130, 246, 0.4)', 'rgba(147, 51, 234, 0.4)', 'rgba(6, 182, 212, 0.4)', 'rgba(16, 185, 129, 0.4)'][i % 4]
+                    }`
+                  }}
+                  animate={{
+                    y: [0, -20, 0],
+                    x: [0, 10, 0],
+                    scale: [1, 1.2, 1],
+                    opacity: [0.4, 0.8, 0.4],
+                  }}
+                  transition={{
+                    duration: 4 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                    ease: "easeInOut"
+                  }}
+                />
+              ))}
+
+              {/* Rotating geometric shapes */}
+              {[...Array(4)].map((_, i) => (
+                <motion.div
+                  key={`shape-${i}`}
+                  className="absolute border opacity-30"
+                  style={{
+                    width: `${15 + i * 10}px`,
+                    height: `${15 + i * 10}px`,
+                    left: `${20 + i * 15}%`,
+                    top: `${20 + i * 15}%`,
+                    borderColor: ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981'][i],
+                    borderWidth: '1px',
+                    borderRadius: i % 2 === 0 ? '0' : '50%',
+                    transform: `rotate(${i * 45}deg)`
+                  }}
+                  animate={{
+                    rotate: [0, 360],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 8 + i * 2,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+              ))}
+
+              {/* Floating particles */}
+              {[...Array(12)].map((_, i) => (
+                <motion.div
+                  key={`particle-${i}`}
+                  className="absolute w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-40"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                  }}
+                  animate={{
+                    y: [0, -30, 0],
+                    opacity: [0.2, 0.8, 0.2],
+                    scale: [0.5, 1.5, 0.5],
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2,
+                  }}
+                />
+              ))}
               
               {/* Center glow effect */}
               <div 
                 className="absolute inset-0 rounded-3xl opacity-30"
                 style={{
                   background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.3), rgba(147, 51, 234, 0.2), transparent 70%)'
+                }}
+              />
+
+              {/* Subtle pulsing light */}
+              <motion.div
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background: 'radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.1), transparent 50%)'
+                }}
+                animate={{
+                  opacity: [0.3, 0.6, 0.3],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
                 }}
               />
             </div>

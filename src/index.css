@@ -115,17 +115,17 @@
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-track {
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.8));
-    border-radius: 8px;
+    border-radius: 6px;
   }
 
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(145deg, rgba(59, 130, 246, 0.6), rgba(147, 51, 234, 0.6));
-    border-radius: 8px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
   }
@@ -202,6 +202,17 @@
   }
 }
 
+@keyframes orb-float {
+  0%, 100% { 
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translate3d(10px, -20px, 0) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
 /* Performance-optimized animation classes */
 .animate-float-3d {
   animation: float-3d 6s ease-in-out infinite;
@@ -227,6 +238,11 @@
 .animate-shimmer-text {
   animation: gradient-shift 3s ease-in-out infinite;
   will-change: background-position;
+}
+
+.animate-orb-float {
+  animation: orb-float 4s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 /* Modern glass morphism with enhanced depth */
@@ -375,14 +391,28 @@
       0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  /* Optimize animations for mobile */
+  /* Optimize animations for mobile performance */
   .animate-shimmer-text {
     animation-duration: 4s;
+  }
+  
+  .animate-orb-float {
+    animation-duration: 6s;
   }
   
   .glass-morphism {
     backdrop-filter: blur(15px) saturate(150%);
     -webkit-backdrop-filter: blur(15px) saturate(150%);
+  }
+
+  /* Mobile card improvements */
+  .mobile-card-padding {
+    padding: 1rem;
+  }
+
+  .mobile-full-width {
+    width: calc(100vw - 1rem);
+    max-width: 100%;
   }
 }
 
@@ -393,6 +423,15 @@
       0 15px 35px rgba(0, 0, 0, 0.25),
       0 5px 15px rgba(0, 0, 0, 0.12),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Reduce animation complexity on small screens */
+  .animate-float-3d {
+    animation-duration: 8s;
+  }
+
+  .animate-depth {
+    animation: none;
   }
 }
 
@@ -413,5 +452,46 @@
     text-shadow: 
       0 0.5px 0 rgba(0, 0, 0, 0.4),
       0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Improved navbar animations */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+  transform: translateX(0);
+}
+
+/* Floating elements optimization */
+.floating-element {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Performance improvements for 3D elements */
+@supports (backdrop-filter: blur(1px)) {
+  .glass-effect {
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-effect {
+    background: rgba(15, 23, 42, 0.8);
   }
 }

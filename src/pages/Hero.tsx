@@ -9,13 +9,16 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <PageTransition>
-      <ResponsiveSection fullHeight className="pt-20 flex items-center">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+      <ResponsiveSection 
+        fullHeight 
+        className="pt-0 flex items-center justify-center min-h-screen max-h-screen overflow-hidden"
+      >
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full h-full py-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6 lg:space-y-8 order-2 lg:order-1"
+            className="space-y-6 lg:space-y-8 order-2 lg:order-1 flex flex-col justify-center"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -169,7 +172,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="h-64 sm:h-80 lg:h-96 xl:h-[500px] relative order-1 lg:order-2 w-full"
+            className="h-64 sm:h-80 lg:h-96 xl:h-[500px] relative order-1 lg:order-2 w-full flex items-center justify-center"
           >
             <div 
               className="absolute inset-4 rounded-3xl opacity-50"
@@ -190,24 +193,6 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center space-y-2 text-slate-400"
-          >
-            <span className="text-sm font-medium" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-              Scroll to explore
-            </span>
-            <ArrowDown size={20} className="opacity-70" />
-          </motion.div>
-        </motion.div>
       </ResponsiveSection>
     </PageTransition>
   );

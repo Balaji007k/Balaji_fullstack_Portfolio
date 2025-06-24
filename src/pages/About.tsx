@@ -21,10 +21,23 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center space-y-6"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              About Me
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto px-4">
+            <motion.div className="relative">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold relative">
+                <span 
+                  className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-transparent blur-sm"
+                  style={{ transform: 'translate(2px, 2px)' }}
+                >
+                  About Me
+                </span>
+                <span className="relative bg-gradient-to-br from-white to-slate-200 bg-clip-text text-transparent">
+                  About Me
+                </span>
+              </h1>
+            </motion.div>
+            <p 
+              className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto px-4"
+              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
+            >
               I'm a passionate full-stack developer who loves creating beautiful, functional, and user-friendly digital experiences. With expertise in modern web technologies, I bring ideas to life through code.
             </p>
           </motion.div>
@@ -33,14 +46,36 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white/5 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-12 space-y-8 w-full overflow-hidden"
+            className="relative rounded-3xl p-6 sm:p-8 lg:p-12 space-y-8 w-full overflow-hidden"
+            style={{
+              background: 'linear-gradient(145deg, #1e293b, #0f172a)',
+              boxShadow: '0 25px 50px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.1)'
+            }}
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">My Journey</h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              <p className="text-base sm:text-lg">
+            <div 
+              className="absolute inset-0 rounded-3xl opacity-20"
+              style={{
+                background: 'radial-gradient(circle at 30% 20%, rgba(148, 163, 184, 0.1), transparent 50%)'
+              }}
+            ></div>
+            <h2 
+              className="text-2xl sm:text-3xl font-bold text-white mb-6 relative z-10"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}
+            >
+              My Journey
+            </h2>
+            <div className="space-y-6 text-slate-300 leading-relaxed relative z-10">
+              <p 
+                className="text-base sm:text-lg"
+                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
+              >
                 As a software engineer with a passion for innovation, I specialize in creating dynamic web applications and interactive user experiences. My journey began with curiosity about how websites work, and it has evolved into a deep expertise in modern development frameworks.
               </p>
-              <p className="text-base sm:text-lg">
+              <p 
+                className="text-base sm:text-lg"
+                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
+              >
                 I believe in the power of clean code, thoughtful design, and continuous learning. Whether it's building scalable applications, optimizing performance, or creating stunning visual effects, I approach every project with dedication and creativity.
               </p>
             </div>
@@ -55,21 +90,45 @@ const About = () => {
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-4 lg:p-6 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl border border-white/10 w-full overflow-hidden"
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  boxShadow: "0 25px 50px rgba(0,0,0,0.4)"
+                }}
+                className="text-center p-4 lg:p-6 rounded-2xl w-full overflow-hidden relative group cursor-pointer"
+                style={{
+                  background: 'linear-gradient(145deg, #334155, #1e293b)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(255,255,255,0.1)'
+                }}
               >
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  style={{
+                    background: 'radial-gradient(circle at center, rgba(148, 163, 184, 0.3), transparent 70%)'
+                  }}
+                ></div>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
-                  className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2"
+                  className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 relative z-10"
+                  style={{
+                    background: 'linear-gradient(135deg, #e2e8f0, #94a3b8)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 2px 8px rgba(0,0,0,0.3)'
+                  }}
                 >
                   {achievement.number}
                 </motion.div>
-                <div className="text-gray-400 text-xs sm:text-sm lg:text-base">
+                <div 
+                  className="text-slate-400 text-xs sm:text-sm lg:text-base relative z-10"
+                  style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
+                >
                   {achievement.label}
                 </div>
               </motion.div>

@@ -14,8 +14,6 @@ import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
-import Articles from "./pages/Articles";
-import CodingProfiles from "./pages/CodingProfiles";
 import SocialLinks from "./pages/SocialLinks";
 import NotFound from "./pages/NotFound";
 
@@ -39,8 +37,6 @@ const App = () => (
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/articles" element={<Articles />} />
-              <Route path="/coding-profiles" element={<CodingProfiles />} />
               <Route path="/social" element={<SocialLinks />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

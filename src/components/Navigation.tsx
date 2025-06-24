@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,8 +9,6 @@ const navItems = [
   { path: "/projects", label: "Projects" },
   { path: "/skills", label: "Skills" },
   { path: "/contact", label: "Contact" },
-  { path: "/articles", label: "Articles" },
-  { path: "/coding-profiles", label: "Profiles" },
   { path: "/social", label: "Social" },
   { path: "/cta", label: "Hire Me" },
   { path: "/resume", label: "Resume" },

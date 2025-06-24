@@ -18,6 +18,7 @@ import SocialLinks from "./pages/SocialLinks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+document.querySelectorAll('#lovable-badge').forEach(el => el.remove());
 
 const App = () => (
   <QueryClientProvider client={queryClient}>

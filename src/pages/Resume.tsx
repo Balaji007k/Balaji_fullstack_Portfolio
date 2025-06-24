@@ -7,8 +7,8 @@ const Resume = () => {
   const handleDownload = () => {
     // Replace with actual resume file path
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'resume.pdf';
+    link.href = '/Balaji_K-Resume.pdf';
+    link.download = 'Balaji-resume.pdf';
     link.click();
   };
 

@@ -39,27 +39,16 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center space-y-4 lg:space-y-6"
           >
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold relative inline-block">
-                <motion.span 
-                  className="relative bg-gradient-to-br from-white via-slate-100 to-slate-300 bg-clip-text text-transparent"
-                  initial={{ backgroundPosition: "0% 50%" }}
-                  animate={{ backgroundPosition: "100% 50%" }}
-                  transition={{ duration: 2, delay: 0.5 }}
-                  style={{
-                    backgroundSize: "200% 200%",
-                    textShadow: "0 4px 12px rgba(0,0,0,0.3)"
-                  }}
-                >
-                  About Me
-                </motion.span>
-              </h1>
-            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-4 lg:space-y-6"
+          >
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              About Me
+            </h1>
+          </motion.div>
             
             <motion.div 
               className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto px-2"

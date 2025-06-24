@@ -47,13 +47,13 @@ export const Navigation = () => {
             className="text-xl lg:text-2xl font-bold relative cursor-pointer"
           >
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent relative z-10">
-              Portfolio
+              Balaji K
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
           </motion.div>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-2 xl:space-x-3 overflow-x-auto">
+          <div className="hidden lg:flex space-x-2 xl:space-x-3 overflow-x-auto overflow-y-hidden">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.path}

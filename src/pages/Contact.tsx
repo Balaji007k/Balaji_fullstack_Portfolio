@@ -95,7 +95,7 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             onSubmit={handleSubmit}
-            className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 space-y-6"
+            className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 space-y-6 flex flex-col justify-center"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>

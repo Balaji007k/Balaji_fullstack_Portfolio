@@ -9,31 +9,15 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      image: "/placeholder.svg",
+      image: "/assets/E-commerce.jpg",
       tags: ["React", "Node.js", "MongoDB"],
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates",
-      image: "/placeholder.svg",
-      tags: ["Vue.js", "Firebase", "Tailwind"],
-      github: "#",
-      live: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Beautiful weather app with animated backgrounds",
-      image: "/placeholder.svg",
-      tags: ["React", "API", "CSS3"],
       github: "#",
       live: "#"
     },
     {
       title: "Portfolio Website",
       description: "Responsive portfolio with 3D animations",
-      image: "/placeholder.svg",
+      image: "/assets/Portfolio.png",
       tags: ["Three.js", "Framer Motion", "React"],
       github: "#",
       live: "#"

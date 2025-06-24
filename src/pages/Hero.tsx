@@ -27,14 +27,19 @@ const Hero = () => {
             >
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-center lg:text-left">
                 <motion.span 
-                  className="relative inline-block mb-2 lg:mb-4"
+                  className="relative inline-block animate-shimmer-text mb-2 lg:mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
+                  style={{
+                    background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #3b82f6)',
+                    backgroundSize: '300% 300%',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    animation: 'gradient-shift 3s ease-in-out infinite'
+                  }}
                 >
-                  <span className="relative bg-gradient-to-br from-white to-slate-200 bg-clip-text text-transparent">
-                    Creative
-                  </span>
+                  Creative
                 </motion.span>
                 <br />
                 <motion.span 

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,7 +42,7 @@ export const Navigation = () => {
               scale: 1.05,
               textShadow: "0 0 20px rgba(59, 130, 246, 0.8)"
             }}
-            className="text-xl lg:text-2xl font-bold relative cursor-pointer"
+            className="text-xl lg:text-2xl font-bold font-poppins relative cursor-pointer"
           >
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent relative z-10">
               Balaji K
@@ -60,40 +61,49 @@ export const Navigation = () => {
               >
                 <Link
                   to={item.path}
-                  className={`relative px-4 xl:px-5 py-2.5 rounded-full transition-all duration-300 whitespace-nowrap text-sm xl:text-base group overflow-hidden ${
+                  className={`relative px-5 xl:px-6 py-3 rounded-2xl transition-all duration-500 whitespace-nowrap text-base xl:text-lg font-poppins font-medium group overflow-hidden ${
                     location.pathname === item.path
-                      ? "text-blue-400"
+                      ? "text-white"
                       : "text-gray-300 hover:text-white"
                   }`}
                   style={{
                     background: location.pathname === item.path 
-                      ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))'
-                      : 'transparent'
+                      ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(147, 51, 234, 0.25))'
+                      : 'transparent',
+                    textShadow: location.pathname === item.path 
+                      ? '0 2px 8px rgba(59, 130, 246, 0.4)' 
+                      : 'none'
                   }}
                 >
-                  {/* Hover glow effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Enhanced hover glow effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/15 to-purple-500/15 opacity-0 group-hover:opacity-100 transition-all duration-500 scale-95 group-hover:scale-100"></div>
                   
-                  {/* Animated underline */}
-                  <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                  {/* 3D depth shadow */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
-                  {/* Text with subtle glow on hover */}
-                  <span className="relative z-10 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition-all duration-300">
+                  {/* Animated underline with gradient */}
+                  <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 rounded-full shadow-lg shadow-blue-400/50"></div>
+                  
+                  {/* Text with enhanced effects */}
+                  <span className="relative z-10 group-hover:drop-shadow-[0_2px_12px_rgba(59,130,246,0.8)] group-hover:scale-105 transition-all duration-300 tracking-wide">
                     {item.label}
                   </span>
                   
-                  {/* Active indicator */}
+                  {/* Active indicator with enhanced styling */}
                   {location.pathname === item.path && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute inset-0 rounded-full"
+                      className="absolute inset-0 rounded-2xl border border-blue-400/30"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.15))',
-                        boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                        background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))',
+                        boxShadow: '0 4px 20px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.1)'
                       }}
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}
+                  
+                  {/* Subtle shimmer effect on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
                 </Link>
               </motion.div>
             ))}
@@ -151,22 +161,26 @@ export const Navigation = () => {
                     <Link
                       to={item.path}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-center transition-all duration-300 text-sm relative overflow-hidden group ${
+                      className={`block px-4 py-4 rounded-xl text-center transition-all duration-500 text-sm font-poppins font-medium relative overflow-hidden group ${
                         location.pathname === item.path
-                          ? "text-blue-400"
+                          ? "text-white"
                           : "text-gray-300 hover:text-white"
                       }`}
                       style={{
                         background: location.pathname === item.path 
-                          ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))'
-                          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02))',
-                        border: '1px solid rgba(255, 255, 255, 0.1)'
+                          ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(147, 51, 234, 0.25))'
+                          : 'linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04))',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        textShadow: location.pathname === item.path 
+                          ? '0 2px 8px rgba(59, 130, 246, 0.4)' 
+                          : 'none'
                       }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                      <span className="relative z-10 group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition-all duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl scale-95 group-hover:scale-100"></div>
+                      <span className="relative z-10 group-hover:drop-shadow-[0_2px_8px_rgba(59,130,246,0.6)] group-hover:scale-105 transition-all duration-300 tracking-wide">
                         {item.label}
                       </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-xl"></div>
                     </Link>
                   </motion.div>
                 ))}

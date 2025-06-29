@@ -61,7 +61,7 @@ export const Navigation = () => {
               >
                 <Link
                   to={item.path}
-                  className={`relative px-5 xl:px-6 py-3 rounded-2xl transition-all duration-500 whitespace-nowrap text-base xl:text-lg font-poppins font-medium group overflow-hidden ${
+                  className={`relative px-6 xl:px-7 py-3.5 rounded-2xl transition-all duration-500 whitespace-nowrap text-lg xl:text-xl font-poppins font-semibold group overflow-hidden ${
                     location.pathname === item.path
                       ? "text-white"
                       : "text-gray-300 hover:text-white"
@@ -72,7 +72,9 @@ export const Navigation = () => {
                       : 'transparent',
                     textShadow: location.pathname === item.path 
                       ? '0 2px 8px rgba(59, 130, 246, 0.4)' 
-                      : 'none'
+                      : 'none',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase' as const
                   }}
                 >
                   {/* Enhanced hover glow effect */}
@@ -82,10 +84,10 @@ export const Navigation = () => {
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   {/* Animated underline with gradient */}
-                  <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 rounded-full shadow-lg shadow-blue-400/50"></div>
+                  <div className="absolute bottom-1.5 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 rounded-full shadow-lg shadow-blue-400/50"></div>
                   
                   {/* Text with enhanced effects */}
-                  <span className="relative z-10 group-hover:drop-shadow-[0_2px_12px_rgba(59,130,246,0.8)] group-hover:scale-105 transition-all duration-300 tracking-wide">
+                  <span className="relative z-10 group-hover:drop-shadow-[0_4px_16px_rgba(59,130,246,0.8)] group-hover:scale-105 transition-all duration-300 tracking-wider">
                     {item.label}
                   </span>
                   
@@ -96,7 +98,7 @@ export const Navigation = () => {
                       className="absolute inset-0 rounded-2xl border border-blue-400/30"
                       style={{
                         background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2))',
-                        boxShadow: '0 4px 20px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.1)'
+                        boxShadow: '0 6px 24px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.1)'
                       }}
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />

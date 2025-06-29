@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -413,24 +414,6 @@
     width: calc(100vw - 1rem);
     max-width: 100%;
   }
-
-  /* Optimize 3D performance on mobile */
-  canvas {
-    image-rendering: optimizeSpeed;
-    image-rendering: -webkit-optimize-contrast;
-  }
-  
-  /* Better mobile spacing for hero content */
-  .hero-mobile-spacing {
-    padding: 2rem 1rem;
-  }
-  
-  /* Profile photo mobile adjustments */
-  .profile-photo-mobile {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 2rem;
-  }
 }
 
 @media (max-width: 640px) {
@@ -450,82 +433,16 @@
   .animate-depth {
     animation: none;
   }
-
-  /* Further reduce 3D complexity on small screens */
-  canvas {
-    opacity: 0.8;
-  }
-  
-  /* Ensure text readability on mobile */
-  .hero-text-mobile {
-    text-shadow: 0 2px 20px rgba(0,0,0,0.9);
-  }
 }
 
-@media (max-width: 480px) {
-  /* Minimal 3D effects on very small screens */
-  canvas {
-    opacity: 0.6;
-    filter: blur(0.5px);
-  }
-}
-
-/* Performance optimizations for 3D elements */
-.hero-3d-container {
-  transform: translateZ(0);
-  will-change: transform;
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-/* Improved gradient animation performance */
-@keyframes gradient-shift-optimized {
-  0%, 100% { 
-    background-position: 0% 50%; 
-    transform: translateZ(0);
-  }
-  50% { 
-    background-position: 100% 50%; 
-    transform: translateZ(0);
-  }
-}
-
-.animate-gradient-text {
-  animation: gradient-shift-optimized 3s ease-in-out infinite;
-  will-change: background-position;
-}
-
-/* Responsive profile photo container */
-.profile-container {
-  max-width: min(300px, 80vw);
-  aspect-ratio: 1;
-}
-
-@media (min-width: 1024px) {
-  .profile-container {
-    max-width: 350px;
-  }
-}
-
-/* Better backdrop blur fallback */
-@supports not (backdrop-filter: blur(10px)) {
-  .hero-overlay {
-    background: rgba(17, 24, 39, 0.85);
-  }
-}
-
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
-  canvas {
-    animation: none !important;
-  }
-  
-  .animate-gradient-text {
-    animation: none !important;
-    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

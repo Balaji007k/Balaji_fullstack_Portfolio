@@ -9,7 +9,7 @@ const SocialLinks = () => {
       name: "LinkedIn",
       username: "@yourname",
       description: "Professional network and career updates",
-      // followers: "2.5K",
+      followers: "2.5K",
       icon: <Linkedin size={32} />,
       color: "from-blue-600 to-blue-800",
       hoverColor: "hover:shadow-blue-500/30",
@@ -19,17 +19,17 @@ const SocialLinks = () => {
       name: "GitHub",
       username: "@yourusername",
       description: "Open source projects and code repositories",
-      // followers: "1.2K",
+      followers: "1.2K",
       icon: <Github size={32} />,
       color: "from-gray-700 to-gray-900",
       hoverColor: "hover:shadow-gray-500/30",
-      url: "https://github.com/Balaji007k"
+      url: "https://github.com"
     },
     {
       name: "Twitter",
       username: "@yourhandle",
       description: "Tech insights and industry discussions",
-      // followers: "892",
+      followers: "892",
       icon: <Twitter size={32} />,
       color: "from-sky-500 to-blue-600",
       hoverColor: "hover:shadow-sky-500/30",
@@ -39,7 +39,7 @@ const SocialLinks = () => {
       name: "YouTube",
       username: "@yourchannel",
       description: "Coding tutorials and tech reviews",
-      // followers: "3.1K",
+      followers: "3.1K",
       icon: <Youtube size={32} />,
       color: "from-red-600 to-red-800",
       hoverColor: "hover:shadow-red-500/30",
@@ -49,7 +49,7 @@ const SocialLinks = () => {
       name: "Instagram",
       username: "@yourprofile",
       description: "Behind the scenes and life updates",
-      // followers: "1.8K",
+      followers: "1.8K",
       icon: "📸",
       color: "from-pink-600 to-purple-600",
       hoverColor: "hover:shadow-pink-500/30",
@@ -108,7 +108,7 @@ const SocialLinks = () => {
                     )}
                   </motion.div>
                   
-                  {/* <motion.div
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
@@ -116,7 +116,7 @@ const SocialLinks = () => {
                   >
                     <div className="text-2xl font-bold text-white">{platform.followers}</div>
                     <div className="text-sm text-gray-400">followers</div>
-                  </motion.div> */}
+                  </motion.div>
                 </div>
 
                 {/* Content */}
@@ -177,13 +177,13 @@ const SocialLinks = () => {
               Join me on this journey of continuous learning and development. Share your thoughts, ask questions, and let's grow together as a community.
             </p>
             
-            {/* <motion.button
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
             >
               Follow All Platforms
-            </motion.button> */}
+            </motion.button>
           </div>
         </motion.div>
       </div>

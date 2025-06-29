@@ -23,17 +23,23 @@ const FloatingShape = ({ position, geometry, color, scale = 1 }: {
   const GeometryComponent = useMemo(() => {
     switch (geometry) {
       case 'sphere':
-        return <Sphere ref={meshRef} args={[0.5 * scale, 32, 32]} position={position}>
-          <meshStandardMaterial color={color} transparent opacity={0.6} wireframe />
-        </Sphere>;
+        return (
+          <Sphere ref={meshRef} args={[0.5 * scale, 32, 32]} position={position}>
+            <meshStandardMaterial color={color} transparent opacity={0.6} wireframe />
+          </Sphere>
+        );
       case 'box':
-        return <Box ref={meshRef} args={[0.8 * scale, 0.8 * scale, 0.8 * scale]} position={position}>
-          <meshStandardMaterial color={color} transparent opacity={0.4} wireframe />
-        </Box>;
+        return (
+          <Box ref={meshRef} args={[0.8 * scale, 0.8 * scale, 0.8 * scale]} position={position}>
+            <meshStandardMaterial color={color} transparent opacity={0.4} wireframe />
+          </Box>
+        );
       case 'torus':
-        return <Torus ref={meshRef} args={[0.6 * scale, 0.2 * scale, 16, 100]} position={position}>
-          <meshStandardMaterial color={color} transparent opacity={0.5} wireframe />
-        </Torus>;
+        return (
+          <Torus ref={meshRef} args={[0.6 * scale, 0.2 * scale, 16, 100]} position={position}>
+            <meshStandardMaterial color={color} transparent opacity={0.5} wireframe />
+          </Torus>
+        );
       default:
         return null;
     }

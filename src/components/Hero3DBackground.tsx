@@ -91,13 +91,13 @@ const ParticleField = () => {
 
 export const Hero3DBackground = () => {
   const shapes = useMemo(() => [
-    { position: [-4, 2, -2], geometry: 'sphere', color: '#3b82f6', scale: 1.2 },
-    { position: [3, -1, -1], geometry: 'box', color: '#8b5cf6', scale: 0.8 },
-    { position: [-2, -2, -3], geometry: 'torus', color: '#06b6d4', scale: 1 },
-    { position: [4, 3, -4], geometry: 'sphere', color: '#10b981', scale: 0.6 },
-    { position: [-3, 1, -5], geometry: 'box', color: '#f59e0b', scale: 1.1 },
-    { position: [2, -3, -2], geometry: 'torus', color: '#ef4444', scale: 0.9 },
-  ] as const), []);
+    { position: [-4, 2, -2] as [number, number, number], geometry: 'sphere' as const, color: '#3b82f6', scale: 1.2 },
+    { position: [3, -1, -1] as [number, number, number], geometry: 'box' as const, color: '#8b5cf6', scale: 0.8 },
+    { position: [-2, -2, -3] as [number, number, number], geometry: 'torus' as const, color: '#06b6d4', scale: 1 },
+    { position: [4, 3, -4] as [number, number, number], geometry: 'sphere' as const, color: '#10b981', scale: 0.6 },
+    { position: [-3, 1, -5] as [number, number, number], geometry: 'box' as const, color: '#f59e0b', scale: 1.1 },
+    { position: [2, -3, -2] as [number, number, number], geometry: 'torus' as const, color: '#ef4444', scale: 0.9 },
+  ], []);
 
   return (
     <div className="absolute inset-0 w-full h-full -z-10">

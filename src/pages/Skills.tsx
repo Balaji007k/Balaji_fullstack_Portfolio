@@ -9,7 +9,7 @@ const Skills = () => {
       skills: [
         { name: "React", level: 95 },
         { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 85 },
+        // { name: "TypeScript", level: 85 },
         { name: "CSS/SCSS", level: 88 },
       ]
     },
@@ -27,14 +27,14 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 92 },
         { name: "Figma", level: 85 },
-        { name: "Three.js", level: 80 },
+        // { name: "Three.js", level: 80 },
       ]
     }
   ];
 
   return (
     <PageTransition>
-      <div className="container mx-auto max-w-6xl space-y-16">
+      <div className="container lg:pt-10 mx-auto max-w-6xl space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -12,7 +12,7 @@ const Hero = () => {
         fullHeight 
         className="pt-0 flex items-center justify-center min-h-screen max-h-screen overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full h-full py-16 lg:py-20">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full h-full pb-16 lg:pb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}

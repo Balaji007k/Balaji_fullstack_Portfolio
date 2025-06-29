@@ -26,8 +26,8 @@ const Projects = () => {
 
   return (
     <PageTransition>
-      <ResponsiveSection className="pt-16 lg:pt-20 pb-8 lg:pb-12">
-        <div className="space-y-8 lg:space-y-16 px-2 sm:px-4 lg:px-8">
+      {/* <ResponsiveSection className="pt-16 lg:pt-20 pb-8 lg:pb-12"> */}
+        <div className="space-y-8 lg:space-y-16 px-2 lg:pt-10 sm:px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ const Projects = () => {
             </motion.button>
           </motion.div> */}
         </div>
-      </ResponsiveSection>
+      {/* </ResponsiveSection> */}
     </PageTransition>
   );
 };

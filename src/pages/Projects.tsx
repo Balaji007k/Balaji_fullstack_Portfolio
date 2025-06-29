@@ -11,7 +11,7 @@ const Projects = () => {
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
       image: "/assets/E-commerce.jpg",
       tags: ["React", "Node.js", "MongoDB"],
-      github: "#",
+      github: "https://github.com/Balaji007k/Teabuff.git",
       live: "#"
     },
     {
@@ -118,7 +118,7 @@ const Projects = () => {
             ))}
           </div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -137,7 +137,7 @@ const Projects = () => {
               <span className="relative z-10 text-sm sm:text-base">View More Projects</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </ResponsiveSection>
     </PageTransition>

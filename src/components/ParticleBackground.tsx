@@ -13,7 +13,7 @@ export const ParticleBackground = () => {
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0"
       options={{
         background: {
           color: {

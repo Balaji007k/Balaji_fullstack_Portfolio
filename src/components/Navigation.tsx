@@ -51,7 +51,7 @@ export const Navigation = () => {
           </motion.div>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-2 xl:space-x-3 overflow-x-auto overflow-y-hidden">
+          <div className="hidden lg:flex space-x-2 xl:space-x-3 overflow-hidden">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.path}
@@ -189,17 +189,6 @@ export const Navigation = () => {
           )}
         </AnimatePresence>
       </motion.nav>
-      
-      {/* Custom scrollbar hide utility */}
-      <style global>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </>
   );
 };

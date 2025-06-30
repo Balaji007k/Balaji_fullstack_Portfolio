@@ -196,7 +196,7 @@ export const Navigation = () => {
       </motion.nav>
       
       {/* Custom scrollbar hide utility */}
-      <style jsx global>{`
+      <style global>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;

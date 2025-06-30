@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
 import { ResponsiveSection } from "../components/ResponsiveSection";
@@ -13,7 +12,7 @@ const Hero = () => {
         fullHeight 
         className="pt-0 sm:pt-20 lg:pt-24 xl:pt-28 flex items-center justify-center min-h-full w-full overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full h-full pb-16 lg:pb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center w-full h-full pb-16 lg:pb-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -172,9 +171,9 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right side - 3D Profile Photo */}
+          {/* Right side - 3D Profile Photo - Updated container to accommodate larger size */}
           <div className="order-1 lg:order-2 flex items-center justify-center w-full">
-            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md aspect-square">
+            <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg 2xl:max-w-xl aspect-square">
               <ProfilePhoto />
             </div>
           </div>

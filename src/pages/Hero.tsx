@@ -11,7 +11,7 @@ const Hero = () => {
     <PageTransition>
       <ResponsiveSection 
         fullHeight 
-        className="pt-16 sm:pt-20 lg:pt-24 xl:pt-28 flex items-center justify-center min-h-full w-full overflow-hidden"
+        className="sm:pt-20 lg:pt-24 xl:pt-28 flex items-center justify-center min-h-full w-full overflow-hidden"
       >
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center w-full h-full pb-16 lg:pb-20">
           <motion.div

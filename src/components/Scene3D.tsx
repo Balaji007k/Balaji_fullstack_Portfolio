@@ -71,7 +71,7 @@ export const Scene3D = () => {
           autoRotateSpeed={0.5}
           enablePan={false}
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.III / 2}
+          minPolarAngle={Math.PI / 2}
         />
       </Canvas>
     </div>

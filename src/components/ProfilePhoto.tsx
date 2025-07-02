@@ -5,67 +5,75 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 export const ProfilePhoto = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8, x: 50 }}
-      animate={{ opacity: 1, scale: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
       className="relative w-full h-full flex items-center justify-center"
     >
-      {/* 3D Container with glassmorphism - Increased sizes */}
+      {/* Main container with glassmorphism effect */}
       <div 
-        className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 rounded-2xl overflow-hidden"
+        className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.15), rgba(6, 182, 212, 0.1))',
-          backdropFilter: 'blur(25px) saturate(200%)',
-          boxShadow: '0 25px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3), inset 0 -1px 0 rgba(0,0,0,0.1)',
-          border: '1px solid rgba(255,255,255,0.2)',
-          transform: 'perspective(1000px) rotateX(5deg) rotateY(-5deg)'
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+          backdropFilter: 'blur(20px)',
+          boxShadow: '0 25px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
+          border: '1px solid rgba(255,255,255,0.15)',
         }}
       >
-        {/* Animated rotating border */}
+        {/* Animated gradient border */}
         <motion.div
-          className="absolute inset-0 rounded-2xl p-0.5"
-          style={{ background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)', padding: '2px' }}
-          animate={{ rotate: [0, 360] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 rounded-3xl p-0.5"
+          style={{ 
+            background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)',
+            backgroundSize: '400% 400%'
+          }}
+          animate={{ 
+            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
         >
           <div 
-            className="w-full h-full rounded-2xl"
+            className="w-full h-full rounded-3xl"
             style={{
               background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8))',
             }}
           />
         </motion.div>
 
-        {/* Profile Image Container - Increased sizes */}
+        {/* Profile Image */}
         <motion.div
-          className="absolute inset-6 sm:inset-8 md:inset-10 lg:inset-8 xl:inset-10 2xl:inset-12 flex items-center justify-center"
+          className="absolute inset-8 flex items-center justify-center"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          <Avatar className="w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-52 lg:h-52 xl:w-56 xl:h-56 2xl:w-64 2xl:h-64 border-2 border-white/20 shadow-2xl">
+          <Avatar className="w-full h-full border-2 border-white/20 shadow-2xl">
             <AvatarImage 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
               alt="Balaji K" 
               className="object-cover"
             />
-            <AvatarFallback className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+            <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
               BK
             </AvatarFallback>
           </Avatar>
         </motion.div>
 
-        {/* Floating particles around the image */}
-        {[...Array(6)].map((_, i) => (
+        {/* Floating particles */}
+        {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-60"
+            className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-70"
             style={{
-              left: `${20 + Math.random() * 60}%`,
-              top: `${20 + Math.random() * 60}%`,
+              left: `${15 + Math.random() * 70}%`,
+              top: `${15 + Math.random() * 70}%`,
             }}
             animate={{
-              y: [0, -15, 0],
-              opacity: [0.4, 0.8, 0.4],
+              y: [0, -20, 0],
+              opacity: [0.4, 1, 0.4],
               scale: [0.5, 1.2, 0.5],
             }}
             transition={{
@@ -78,13 +86,13 @@ export const ProfilePhoto = () => {
 
         {/* Central glow effect */}
         <motion.div
-          className="absolute inset-0 rounded-2xl opacity-40"
+          className="absolute inset-0 rounded-3xl opacity-30"
           style={{
-            background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.3), rgba(147, 51, 234, 0.2), transparent 70%)'
+            background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.4), rgba(147, 51, 234, 0.3), transparent 70%)'
           }}
           animate={{
-            scale: [1, 1.05, 1],
-            opacity: [0.3, 0.6, 0.3],
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
             duration: 4,

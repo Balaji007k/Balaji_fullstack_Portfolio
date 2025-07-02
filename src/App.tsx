@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Navigation } from "./components/Navigation";
+import Navigation from "./components/Navigation";
 import { ParticleBackground } from "./components/ParticleBackground";
 import Hero from "./pages/Hero";
 import About from "./pages/About";

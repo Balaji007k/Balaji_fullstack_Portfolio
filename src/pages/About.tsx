@@ -32,7 +32,7 @@ const About = () => {
   return (
     <PageTransition>
       {/* <ResponsiveSection className="pt-16 lg:pt-20 pb-8 lg:pb-12"> */}
-        <div className="space-y-8 lg:space-y-16 px-2 lg:pt-10 sm:px-4 lg:px-8">
+        <div className="space-y-8 lg:space-y-16 px-8 pt-20 pb-10 sm:px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

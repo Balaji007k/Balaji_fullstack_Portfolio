@@ -23,7 +23,7 @@ const Hero = () => {
 
         <ResponsiveSection 
           fullHeight 
-          className="relative z-10 flex items-center justify-center min-h-screen pt-16 sm:pt-20"
+          className="relative z-10 flex items-center justify-center min-h-screen pt-20 pb-5 sm:pt-20"
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Mobile-first responsive grid */}

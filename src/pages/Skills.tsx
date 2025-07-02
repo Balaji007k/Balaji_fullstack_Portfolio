@@ -34,7 +34,7 @@ const Skills = () => {
 
   return (
     <PageTransition>
-      <div className="container lg:pt-10 mx-auto max-w-6xl space-y-16">
+      <div className="container pt-20 pb-10 mx-auto max-w-6xl space-y-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CallToAction = () => {
   return (
     <PageTransition>
-      <div className="container lg:pt-10 mx-auto max-w-4xl text-center space-y-12">
+      <div className="container pt-20 pb-10 mx-auto max-w-4xl text-center space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

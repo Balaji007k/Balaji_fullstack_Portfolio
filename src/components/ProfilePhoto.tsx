@@ -12,7 +12,7 @@ export const ProfilePhoto = () => {
     >
       {/* Main container with glassmorphism effect */}
       <div 
-        className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden"
+        className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px] rounded-3xl overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
           backdropFilter: 'blur(20px)',

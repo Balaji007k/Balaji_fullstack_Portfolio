@@ -12,7 +12,7 @@ export const ProfilePhoto = () => {
     >
       {/* Main container with glassmorphism effect */}
       <div 
-        className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px] rounded-3xl overflow-hidden"
+        className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] xl:w-[450px] xl:h-[450px] rounded-3xl overflow-hidden mx-auto"
         style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
           backdropFilter: 'blur(20px)',
@@ -46,8 +46,8 @@ export const ProfilePhoto = () => {
 
         {/* Profile Image */}
         <motion.div
-          className="absolute inset-8 flex items-center justify-center"
-          whileHover={{ scale: 1.05 }}
+          className="absolute inset-6 sm:inset-8 flex items-center justify-center"
+          whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.3 }}
         >
           <Avatar className="w-full h-full border-2 border-white/20 shadow-2xl">
@@ -56,7 +56,7 @@ export const ProfilePhoto = () => {
               alt="Balaji K" 
               className="object-cover"
             />
-            <AvatarFallback className="text-4xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+            <AvatarFallback className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
               BK
             </AvatarFallback>
           </Avatar>
@@ -66,7 +66,7 @@ export const ProfilePhoto = () => {
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-70"
+            className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-70"
             style={{
               left: `${15 + Math.random() * 70}%`,
               top: `${15 + Math.random() * 70}%`,

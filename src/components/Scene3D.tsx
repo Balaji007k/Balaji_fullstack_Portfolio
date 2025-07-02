@@ -16,10 +16,12 @@ const FloatingCube = () => {
       <mesh ref={meshRef}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial
-          color="#3B82F6"
-          transparent={true}
-          opacity={0.8}
-          wireframe={true}
+          {...({ 
+            color: "#3B82F6", 
+            transparent: true, 
+            opacity: 0.8, 
+            wireframe: true 
+          } as any)}
         />
       </mesh>
     </Float>
@@ -38,9 +40,11 @@ const FloatingSphere = ({ position }: { position: [number, number, number] }) =>
       <mesh ref={meshRef} position={position}>
         <sphereGeometry args={[0.5, 16, 16]} />
         <meshStandardMaterial
-          color="#8B5CF6"
-          transparent={true}
-          opacity={0.6}
+          {...({ 
+            color: "#8B5CF6", 
+            transparent: true, 
+            opacity: 0.6 
+          } as any)}
         />
       </mesh>
     </Float>

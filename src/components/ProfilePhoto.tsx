@@ -1,80 +1,76 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export const ProfilePhoto = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
+      initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="relative w-64 h-64 md:w-80 md:h-80 mx-auto"
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="relative w-full aspect-square max-w-lg mx-auto"
     >
-      {/* Animated gradient background */}
+      {/* Animated background gradient */}
       <motion.div
-        className="absolute inset-0 rounded-full p-1"
+        className="absolute inset-0 rounded-full"
         style={{
-          background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b)',
-          backgroundSize: '400% 400%',
+          background: "linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)",
+          backgroundSize: "400% 400%"
         }}
         animate={{
-          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
         }}
         transition={{
           duration: 3,
           repeat: Infinity,
-          ease: 'linear',
+          ease: "easeInOut"
         }}
       >
-        {/* Inner container */}
-        <div className="w-full h-full rounded-full bg-slate-900 p-4 flex items-center justify-center">
-          {/* Profile image placeholder */}
-          <motion.div
-            className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-6xl font-bold"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            BK
-          </motion.div>
-        </div>
+        {/* Profile image placeholder */}
+        <motion.div
+          className="absolute inset-2 rounded-full bg-slate-800 flex items-center justify-center text-6xl font-bold text-white"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          BK
+        </motion.div>
       </motion.div>
 
       {/* Floating particles */}
-      {Array.from({ length: 8 }).map((_, i) => (
+      {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-blue-400 rounded-full"
+          className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-70"
           style={{
-            left: `${20 + i * 10}%`,
-            top: `${30 + (i % 3) * 20}%`,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`
           }}
           animate={{
             y: [-10, 10, -10],
             opacity: [0.3, 1, 0.3],
-            scale: [0.8, 1.2, 0.8],
+            scale: [0.8, 1.2, 0.8]
           }}
           transition={{
-            duration: 2 + i * 0.2,
+            duration: 3 + Math.random() * 2,
             repeat: Infinity,
-            delay: i * 0.1,
+            delay: Math.random() * 2
           }}
         />
       ))}
 
-      {/* Outer glow effect */}
+      {/* Glow effect */}
       <motion.div
-        className="absolute inset-0 rounded-full opacity-20 blur-xl"
+        className="absolute inset-0 rounded-full blur-2xl opacity-30"
         style={{
-          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, transparent 70%)',
+          background: "radial-gradient(circle, #3b82f6, #8b5cf6, transparent)"
         }}
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          scale: [1, 1.1, 1],
+          opacity: [0.3, 0.5, 0.3]
         }}
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut"
         }}
       />
     </motion.div>

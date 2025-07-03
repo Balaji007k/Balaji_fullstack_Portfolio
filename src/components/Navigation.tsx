@@ -37,7 +37,7 @@ const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
         >
-          <Link to="/" className="hover:opacity-80 transition-opacity">
+          <Link to="/" className="hover:opacity-8 transition-opacity">
             Balaji K
           </Link>
         </motion.div>

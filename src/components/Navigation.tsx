@@ -9,7 +9,7 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/pixel-dream-weave' },
+    { name: 'Home', path: '/pixel-dream-weave/' },
     { name: 'About', path: '/pixel-dream-weave/about' },
     { name: 'Projects', path: '/pixel-dream-weave/projects' },
     { name: 'Skills', path: '/pixel-dream-weave/skills' },

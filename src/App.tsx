@@ -31,14 +31,14 @@ const App = () => (
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/" element={<Hero />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/cta" element={<CallToAction />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/social" element={<SocialLinks />} />
+              <Route path="/pixel-dream-weave" element={<Hero />} />
+              <Route path="/pixel-dream-weave/about" element={<About />} />
+              <Route path="/pixel-dream-weave/cta" element={<CallToAction />} />
+              <Route path="/pixel-dream-weave/resume" element={<Resume />} />
+              <Route path="/pixel-dream-weave/projects" element={<Projects />} />
+              <Route path="/pixel-dream-weave/skills" element={<Skills />} />
+              <Route path="/pixel-dream-weave/contact" element={<Contact />} />
+              <Route path="/pixel-dream-weave/social" element={<SocialLinks />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

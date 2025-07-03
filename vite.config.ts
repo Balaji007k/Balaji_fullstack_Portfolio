@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  base: '/pixel-dream-weave/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

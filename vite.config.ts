@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
   ].filter(Boolean),
-  base: '/pixel-dream-weave/',
+  base: '/Balaji_fullstack_Portfolio/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

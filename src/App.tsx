@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import Navigation from "./components/Navigation";
 import { ParticleBackground } from "./components/ParticleBackground";
@@ -27,12 +28,12 @@ const App = () => (
       <Sonner />
       <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
         <ParticleBackground />
-        <BrowserRouter>
+        <HashRouter>
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/pixel-dream-weave/" element={<Hero />} />
-              <Route path="/pixel-dream-weave/about" element={<About />} />
+              <Route path="/" element={<Hero />} />
+              <Route path="/about" element={<About />} />
               <Route path="/cta" element={<CallToAction />} />
               <Route path="/resume" element={<Resume />} />
               <Route path="/projects" element={<Projects />} />
@@ -42,7 +43,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </TooltipProvider>
   </QueryClientProvider>

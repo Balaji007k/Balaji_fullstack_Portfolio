@@ -28,7 +28,7 @@ const App = () => (
       <Sonner />
       <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
         <ParticleBackground />
-        <BrowserRouter>
+        <HashRouter>
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
@@ -43,7 +43,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </TooltipProvider>
   </QueryClientProvider>

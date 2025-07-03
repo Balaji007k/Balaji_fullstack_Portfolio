@@ -10,13 +10,13 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', path: '/pixel-dream-weave/' },
-    { name: 'About', path: '/pixel-dream-weave/about' },
-    { name: 'Projects', path: '/pixel-dream-weave/projects' },
-    { name: 'Skills', path: '/pixel-dream-weave/skills' },
-    { name: 'Contact', path: '/pixel-dream-weave/contact' },
-    { name: 'Social', path: '/pixel-dream-weave/social' },
-    { name: 'Hire Me', path: '/pixel-dream-weave/cta' },
-    { name: 'Resume', path: '/pixel-dream-weave/resume' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Skills', path: '/skills' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Social', path: '/social' },
+    { name: 'Hire Me', path: '/cta' },
+    { name: 'Resume', path: '/resume' },
   ];
 
   const isActive = (path: string) => location.pathname === path;

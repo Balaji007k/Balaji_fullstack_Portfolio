@@ -7,7 +7,7 @@ const Resume = () => {
   const handleDownload = () => {
     // Replace with actual resume file path
     const link = document.createElement('a');
-    link.href = '/Balaji_fullstack_developer_Resume.pdf';
+    link.href = 'assets/Balaji_fullstack_developer_Resume.pdf';
     link.download = 'Balaji-resume.pdf';
     link.click();
   };

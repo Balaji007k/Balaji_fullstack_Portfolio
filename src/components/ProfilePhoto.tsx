@@ -17,7 +17,7 @@ export const ProfilePhoto = () => {
         <motion.div
           className="absolute overflow-hidden h-100 w-100 inset-2 rounded-full bg-slate-800 text-6xl font-bold text-white"
         >
-          <img className="h-full scale-125" src="docs/assets/Profile.jpg" alt="Loading" />
+          <img className="h-full scale-125" src="assets/Profile.jpg" alt="Loading" />
         </motion.div>
       </motion.div>
 

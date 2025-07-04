@@ -73,8 +73,7 @@ const Hero = () => {
                   transition={{ duration: 0.8, delay: 0.8 }}
                   className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-4 sm:px-0"
                 >
-                  Crafting digital experiences with cutting-edge technology and creative design. 
-                  Specializing in React, TypeScript, and modern web development.
+                  Full Stack Web Developer skilled in React.js, Node.js, Express.js, and MongoDB. I build responsive UIs, REST APIs, and secure backends. Passionate about clean code, great UX, and continuous learning.
                 </motion.p>
 
                 {/* Call-to-Action Buttons */}
@@ -115,7 +114,7 @@ const Hero = () => {
                   className="flex items-center justify-center lg:justify-start space-x-3 sm:space-x-4 pt-4 px-4 sm:px-0"
                 >
                   <motion.a
-                    href="https://github.com"
+                    href="https://github.com/Balaji007k"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -2 }}
@@ -126,7 +125,7 @@ const Hero = () => {
                   </motion.a>
                   
                   <motion.a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/balaji-k-596057297"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -2 }}

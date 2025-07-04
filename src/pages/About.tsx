@@ -23,8 +23,8 @@ const About = () => {
   }, []);
 
   const achievements = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "3+", label: "Years Experience" },
+    { number: "3+", label: "Projects Completed" },
+    { number: "0+", label: "Years Experience" },
     { number: "100%", label: "Client Satisfaction" },
     { number: "24/7", label: "Support Available" },
   ];
@@ -105,7 +105,7 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 2.0 }}
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
               >
-                As a software engineer with a passion for innovation, I specialize in creating dynamic web applications and interactive user experiences. My journey began with curiosity about how websites work, and it has evolved into a deep expertise in modern development frameworks.
+                As a software engineer with a passion for innovation, I specialize in building dynamic web applications and delivering interactive user experiences. My journey began with a curiosity about how websites work, which has grown into deep expertise in modern development frameworks.
               </motion.p>
               <motion.p 
                 className="text-sm sm:text-base lg:text-lg"
@@ -114,7 +114,7 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 2.3 }}
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
               >
-                I believe in the power of clean code, thoughtful design, and continuous learning. Whether it's building scalable applications, optimizing performance, or creating stunning visual effects, I approach every project with dedication and creativity.
+                I believe in the power of clean code, thoughtful design, and continuous learning. Whether it's developing scalable applications, optimizing performance, or crafting visually engaging interfaces, I approach every project with creativity and dedication.
               </motion.p>
             </div>
           </motion.div>

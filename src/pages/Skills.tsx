@@ -10,14 +10,14 @@ const Skills = () => {
         { name: "React", level: 95 },
         { name: "JavaScript", level: 90 },
         // { name: "TypeScript", level: 85 },
-        { name: "CSS/SCSS", level: 88 },
+        { name: "CSS", level: 88 },
       ]
     },
     {
       title: "Backend",
       skills: [
         { name: "Node.js", level: 87 },
-        { name: "Python", level: 50 },
+        { name: "Java", level: 50 },
         { name: "Express", level: 85 },
         { name: "MongoDB", level: 80 },
       ]

@@ -4,34 +4,20 @@ import { motion } from "framer-motion";
 export const ProfilePhoto = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
       className="relative w-full aspect-square max-w-lg mx-auto"
     >
       {/* Animated background gradient */}
       <motion.div
-        className="absolute inset-0 rounded-full"
+        className="absolute overflow-hidden inset-0 w-full h-full rounded-full"
         style={{
           background: "linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981)",
-          backgroundSize: "400% 400%"
-        }}
-        animate={{
-          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut"
         }}
       >
         {/* Profile image placeholder */}
         <motion.div
-          className="absolute inset-2 rounded-full bg-slate-800 flex items-center justify-center text-6xl font-bold text-white"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+          className="absolute overflow-hidden h-100 w-100 inset-2 rounded-full bg-slate-800 text-6xl font-bold text-white"
         >
-          BK
+          <img className="h-full scale-125" src="docs/assets/Profile.jpg" alt="Loading" />
         </motion.div>
       </motion.div>
 
@@ -56,23 +42,6 @@ export const ProfilePhoto = () => {
           }}
         />
       ))}
-
-      {/* Glow effect */}
-      <motion.div
-        className="absolute inset-0 rounded-full blur-2xl opacity-30"
-        style={{
-          background: "radial-gradient(circle, #3b82f6, #8b5cf6, transparent)"
-        }}
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.3, 0.5, 0.3]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
     </motion.div>
   );
 };

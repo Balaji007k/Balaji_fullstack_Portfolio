@@ -7,17 +7,17 @@ const SocialLinks = () => {
   const socialPlatforms = [
     {
       name: "LinkedIn",
-      username: "@yourname",
+      username: "@Balaji K",
       description: "Professional network and career updates",
       // followers: "2.5K",
       icon: <Linkedin size={32} />,
       color: "from-blue-600 to-blue-800",
       hoverColor: "hover:shadow-blue-500/30",
-      url: "https://linkedin.com"
+      url: "https://www.linkedin.com/in/balaji-k-596057297"
     },
     {
       name: "GitHub",
-      username: "@yourusername",
+      username: "@Balaji007k",
       description: "Open source projects and code repositories",
       // followers: "1.2K",
       icon: <Github size={32} />,
@@ -26,34 +26,14 @@ const SocialLinks = () => {
       url: "https://github.com/Balaji007k"
     },
     {
-      name: "Twitter",
-      username: "@yourhandle",
-      description: "Tech insights and industry discussions",
-      // followers: "892",
-      icon: <Twitter size={32} />,
-      color: "from-sky-500 to-blue-600",
-      hoverColor: "hover:shadow-sky-500/30",
-      url: "https://twitter.com"
-    },
-    {
-      name: "YouTube",
-      username: "@yourchannel",
-      description: "Coding tutorials and tech reviews",
-      // followers: "3.1K",
-      icon: <Youtube size={32} />,
-      color: "from-red-600 to-red-800",
-      hoverColor: "hover:shadow-red-500/30",
-      url: "https://youtube.com"
-    },
-    {
       name: "Instagram",
-      username: "@yourprofile",
+      username: "@___balaji.k_007__",
       description: "Behind the scenes and life updates",
       // followers: "1.8K",
       icon: "📸",
       color: "from-pink-600 to-purple-600",
       hoverColor: "hover:shadow-pink-500/30",
-      url: "https://instagram.com"
+      url: "https://www.instagram.com/___balaji.k_007__"
     }
   ];
 

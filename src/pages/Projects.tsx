@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      image: "/assets/E-commerce.jpg",
+      image: "docs/assets/E-commerce.jpg",
       tags: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/Balaji007k/Teabuff.git",
       live: "#"
@@ -17,9 +17,9 @@ const Projects = () => {
     {
       title: "Portfolio Website",
       description: "Responsive portfolio with 3D animations",
-      image: "/assets/Portfolio.png",
+      image: "docs/assets/Portfolio.png",
       tags: ["Three.js", "Framer Motion", "React"],
-      github: "#",
+      github: "https://github.com/Balaji007k/Balaji_fullstack_Portfolio.git",
       live: "#"
     }
   ];

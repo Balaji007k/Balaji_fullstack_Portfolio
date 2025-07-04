@@ -61,11 +61,11 @@ const Contact = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Email</h4>
-                  <p className="text-gray-400">hello@example.com</p>
+                  <p className="text-gray-400">balaji.k062004@gmail.com</p>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Location</h4>
-                  <p className="text-gray-400">Available worldwide (Remote)</p>
+                  <p className="text-gray-400">Chennai,Tamilnadu</p>
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Response Time</h4>

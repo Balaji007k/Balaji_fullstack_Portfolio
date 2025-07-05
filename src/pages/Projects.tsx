@@ -21,6 +21,14 @@ const Projects = () => {
       tags: ["Three.js", "Framer Motion", "React"],
       github: "https://github.com/Balaji007k/Balaji_fullstack_Portfolio.git",
       live: "#"
+    },
+    {
+      title: "Google clone Comming soon",
+      description: "Responsive Google clone with 3D animations",
+      image: "",
+      tags: ["Three.js", "Framer Motion", "React"],
+      github: "https://github.com/Balaji007k",
+      live: "#"
     }
   ];
 
@@ -61,7 +69,7 @@ const Projects = () => {
                 <div className="relative overflow-hidden">
                   <motion.img
                     src={project.image}
-                    alt={project.title}
+                    alt={index===2&&'Google clone'}
                     className="w-full h-48 sm:h-56 lg:h-48 object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}

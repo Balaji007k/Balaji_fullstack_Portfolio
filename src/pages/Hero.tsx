@@ -71,7 +71,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 px-4 sm:px-0"
+                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 sm:px-0"
                 >
                   Full Stack Web Developer skilled in React.js, Node.js, Express.js, and MongoDB. I build responsive UIs, REST APIs, and secure backends. Passionate about clean code, great UX, and continuous learning.
                 </motion.p>
@@ -81,7 +81,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.0 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-4 sm:px-0"
+                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start sm:px-0"
                 >
                   <Link to="/projects" className="w-full sm:w-auto">
                     <motion.button
@@ -111,7 +111,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.2 }}
-                  className="flex items-center justify-center lg:justify-start space-x-3 sm:space-x-4 pt-4 px-4 sm:px-0"
+                  className="flex items-center justify-center lg:justify-start space-x-3 sm:space-x-4 pt-4 sm:px-0"
                 >
                   <motion.a
                     href="https://github.com/Balaji007k"

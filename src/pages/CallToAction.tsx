@@ -31,7 +31,7 @@ const CallToAction = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30 scale-150"></div>
+          <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-blue-500 lg:to-purple-500 rounded-full lg:blur-3xl lg:opacity-30 scale-150"></div>
           <motion.div
             whileHover={{ 
               scale: 1.1,

@@ -34,12 +34,12 @@ const Resume = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity:0,scale: 0.8 }}
+          animate={{ opacity:1,scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl blur-3xl opacity-30 scale-125"></div>
+          <div className="absolute inset-0 lg:bg-gradient-to-r lg:from-green-500 lg:to-blue-500 rounded-3xl lg:blur-3xl lg:opacity-30 scale-125"></div>
           <motion.div
             whileHover={{ 
               scale: 1.05,

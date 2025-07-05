@@ -24,7 +24,7 @@ const About = () => {
 
   const achievements = [
     { number: "3+", label: "Projects Completed" },
-    { number: "0+", label: "Years Experience" },
+    { number: "6+", label: "Month Experience" },
     { number: "100%", label: "Client Satisfaction" },
     { number: "24/7", label: "Support Available" },
   ];
@@ -36,13 +36,13 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="text-center space-y-4 lg:space-y-6"
           >
             <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="text-center space-y-4 lg:space-y-6"
           >
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -54,14 +54,14 @@ const About = () => {
               className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto px-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
             >
               <span className="inline-block min-h-[3em]">
                 {displayedText}
                 <motion.span
                   animate={{ opacity: [1, 0] }}
-                  transition={{ duration: 0.8, repeat: Infinity }}
+                  transition={{ duration: 0.7, repeat: Infinity }}
                   className="inline-block w-0.5 h-5 bg-blue-400 ml-1"
                 />
               </span>
@@ -71,7 +71,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+            transition={{ duration: 0.7, delay: 1.5 }}
             className="relative rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-12 space-y-6 lg:space-y-8 w-full overflow-hidden mx-auto max-w-6xl"
             style={{
               background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9))',
@@ -91,7 +91,7 @@ const About = () => {
               className="text-xl sm:text-2xl lg:text-3xl font-bold text-white relative z-10 px-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1.8 }}
+              transition={{ duration: 0.7, delay: 1.8 }}
               style={{ textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}
             >
               My Journey
@@ -102,7 +102,7 @@ const About = () => {
                 className="text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 2.0 }}
+                transition={{ duration: 0.7, delay: 2.0 }}
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
               >
                 As a software engineer with a passion for innovation, I specialize in building dynamic web applications and delivering interactive user experiences. My journey began with a curiosity about how websites work, which has grown into deep expertise in modern development frameworks.
@@ -111,7 +111,7 @@ const About = () => {
                 className="text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 2.3 }}
+                transition={{ duration: 0.7, delay: 2.3 }}
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
               >
                 I believe in the power of clean code, thoughtful design, and continuous learning. Whether it's developing scalable applications, optimizing performance, or crafting visually engaging interfaces, I approach every project with creativity and dedication.
@@ -122,7 +122,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.6 }}
+            transition={{ duration: 0.7, delay: 2.6 }}
             className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 lg:gap-6 max-w-6xl mx-auto px-1 sm:px-2"
           >
             {achievements.map((achievement, index) => (
@@ -130,7 +130,7 @@ const About = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 2.8 + index * 0.1 }}
+                transition={{ duration: 0.5, delay: 2.8 + index * 0.1 }}
                 whileHover={{ 
                   scale: 1.02, 
                   y: -2,

@@ -31,16 +31,21 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-          whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
-        >
-          <Link to="/" className="hover:opacity-8 transition-opacity">
-            Balaji K
-          </Link>
-        </motion.div>
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.2 }}
+  whileHover={{ scale: 1.05 }}
+  className="relative inline-block group"
+>
+  <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 bg-white/10 backdrop-blur-sm z-0" />
+  <Link
+    to="/"
+    className="relative z-10 text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent px-3 py-1 rounded-lg"
+  >
+    Balaji K
+  </Link>
+</motion.div>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
@@ -97,7 +102,7 @@ const Navigation = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="absolute top-full left-4 right-4 mt-2 md:hidden rounded-xl overflow-hidden shadow-2xl backdrop-blur-xl bg-slate-900/95 border border-white/10"
+            className="absolute top-full left-4 right-4 mt-2 md:hidden rounded-xl overflow-hidden shadow-2xl backdrop-blur-xl bg-slate-900/100 border border-white/10"
           >
             <div className="py-2">
               {navItems.map((item, index) => (

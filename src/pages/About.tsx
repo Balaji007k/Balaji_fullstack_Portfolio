@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
-import { ResponsiveSection } from "../components/ResponsiveSection";
+// import { ResponsiveSection } from "../components/ResponsiveSection";
 import { useState, useEffect } from "react";
 
 const About = () => {

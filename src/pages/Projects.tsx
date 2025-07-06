@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
-import { ResponsiveSection } from "../components/ResponsiveSection";
+// import { ResponsiveSection } from "../components/ResponsiveSection";
 import { Github, ArrowUp } from "lucide-react";
 
 const Projects = () => {
@@ -23,9 +23,9 @@ const Projects = () => {
       live: "#"
     },
     {
-      title: "Google clone Comming soon",
+      title: "Google clone",
       description: "Responsive Google clone with 3D animations",
-      image: "",
+      image: "assets/Comming soon.jpg",
       tags: ["Three.js", "Framer Motion", "React"],
       github: "https://github.com/Balaji007k",
       live: "#"
@@ -79,7 +79,7 @@ const Projects = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileHover={{ opacity: 1, y: 0 }}
-                    className="absolute top-4 right-4 flex space-x-2"
+                    className="absolute p-2 top-4 right-4 flex space-x-2"
                   >
                     <a
                       href={project.github}
@@ -98,7 +98,7 @@ const Projects = () => {
 
                 <div className="p-4 sm:p-6 lg:p-6 space-y-3 lg:space-y-4">
                   <h3 className="text-lg sm:text-xl lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    {project.title}
+                    <a href={project.github}>{project.title} <span className={`${index===2&&'text-white/50'}`}>{index==2&&'Comming soon'}</span></a>
                   </h3>
                   <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                     {project.description}

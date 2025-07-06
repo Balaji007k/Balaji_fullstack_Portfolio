@@ -117,6 +117,7 @@ const SocialLinks = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileHover={{ opacity: 1, y: 0 }}
+                  whileTap={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   className="pt-4 border-t border-white/10"
                 >

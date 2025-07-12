@@ -23,6 +23,14 @@ const Projects = () => {
       live: "#"
     },
     {
+      title: "ChatBot",
+      description: "React.js ChatBot with Gemini-api",
+      image: "assets/ChatBot.jpg",
+      tags: ["React", "tailwind css"],
+      github: "https://github.com/Balaji007k/Chatbot-AI",
+      live: "https://balaji007k.github.io/Chatbot-AI/"
+    },
+    {
       title: "Google clone",
       description: "Responsive Google clone with 3D animations",
       image: "assets/Comming soon.jpg",
@@ -69,7 +77,7 @@ const Projects = () => {
                 <div className="relative overflow-hidden">
                   <motion.img
                     src={project.image}
-                    alt={index===2&&'Google clone'}
+                    alt={index===3&&'Google clone'}
                     className="w-full h-48 sm:h-56 lg:h-48 object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
@@ -98,7 +106,7 @@ const Projects = () => {
 
                 <div className="p-4 sm:p-6 lg:p-6 space-y-3 lg:space-y-4">
                   <h3 className="text-lg sm:text-xl lg:text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    <a href={project.github}>{project.title} <span className={`${index===2&&'text-white/50'}`}>{index==2&&'Comming soon'}</span></a>
+                    <a href={project.github}>{project.title} <span className={`${index===3&&'text-white/50'}`}>{index==3&&'Comming soon'}</span></a>
                   </h3>
                   <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                     {project.description}

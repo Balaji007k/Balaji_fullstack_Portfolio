@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      image: "assets/E-commerce.jpg",
+      image: "assets/Tea buff.png",
       tags: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/Balaji007k/Teabuff.git",
       live: "#"
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: "Google clone",
       description: "Responsive Google clone with 3D animations",
-      image: "assets/Comming soon.jpg",
+      image: "assets/comming sooon.png",
       tags: ["Three.js", "Framer Motion", "React"],
       github: "https://github.com/Balaji007k",
       live: "#"
@@ -78,15 +78,15 @@ const Projects = () => {
                   <motion.img
                     src={project.image}
                     alt={index===3&&'Google clone'}
-                    className="w-full h-48 sm:h-56 lg:h-48 object-cover"
+                    className="w-full h-48 sm:h-56 lg:h-full object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileHover={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 1, y: 0 }}
+                    // whileHover={{ opacity: 1, y: 0 }}
                     className="absolute p-2 top-4 right-4 flex space-x-2"
                   >
                     <a

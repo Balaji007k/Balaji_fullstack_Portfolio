@@ -7,8 +7,8 @@ import { Github, ArrowUp } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
+      title: "Teabuff (E-Commerce Platform)",
+      description: "Teabuff is a full-stack web application that allows customers to explore, customize, and purchase a wide variety of teas. The site features an intuitive UI for users and a secure admin dashboard for managing products and orders. The goal is to simulate a real-world e-commerce tea shop with a clean and responsive design.",
       image: "assets/Tea buff.png",
       tags: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/Balaji007k/Teabuff.git",
@@ -16,7 +16,7 @@ const Projects = () => {
     },
     {
       title: "Portfolio Website",
-      description: "Responsive portfolio with 3D animations",
+      description: "This is my personal Full Stack Developer portfolio, built using modern web technologies like React.js, Tailwind CSS, Framer Motion, and 3D animations. It showcases my skills, featured projects, resume, and contact details in a clean and interactive UI. The site is fully responsive and optimized for performance, offering a smooth experience across all devices. It reflects my passion for coding, design, and building real-world web applications.",
       image: "assets/Portfolio.png",
       tags: ["Three.js", "Framer Motion", "React"],
       github: "https://github.com/Balaji007k/Balaji_fullstack_Portfolio.git",
@@ -24,9 +24,9 @@ const Projects = () => {
     },
     {
       title: "ChatBot",
-      description: "React.js ChatBot with Gemini-api",
+      description: "Developed a smart AI chatbot using React.js and Google Gemini API that enables real-time, human-like conversations. The chatbot features a clean, responsive UI and handles dynamic user input efficiently. Designed for multi-turn interactions with scope for future enhancements like chat history and user personalization.",
       image: "assets/ChatBot.jpg",
-      tags: ["React", "tailwind css"],
+      tags: ["React", "tailwind css", "API"],
       github: "https://github.com/Balaji007k/Chatbot-AI",
       live: "https://balaji007k.github.io/Chatbot-AI/"
     },

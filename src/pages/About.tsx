@@ -17,7 +17,7 @@ const About = () => {
       } else {
         clearInterval(timer);
       }
-    }, 30);
+    }, 25);
     
     return () => clearInterval(timer);
   }, []);

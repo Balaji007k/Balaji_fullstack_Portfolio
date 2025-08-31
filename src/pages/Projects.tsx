@@ -12,7 +12,7 @@ const Projects = () => {
       image: "assets/Tea buff.png",
       tags: ["React", "Node.js", "MongoDB"],
       github: "https://github.com/Balaji007k/Teabuff.git",
-      live: "#"
+      live: "https://balaji007k.github.io/Teabuff/"
     },
     {
       title: "Portfolio Website",

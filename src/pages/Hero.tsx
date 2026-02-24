@@ -135,7 +135,7 @@ const Hero = () => {
                     <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                   </motion.a>
                   
-                  <Link to="/contact">
+                  <a href="mailto:balaji@email.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you.">
                     <motion.button
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
@@ -143,7 +143,7 @@ const Hero = () => {
                     >
                       <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                     </motion.button>
-                  </Link>
+                  </a>
                   
                   <Link to="/resume">
                     <motion.button

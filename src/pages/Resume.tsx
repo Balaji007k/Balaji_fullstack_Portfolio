@@ -7,8 +7,8 @@ const Resume = () => {
   const handleDownload = () => {
     // Replace with actual resume file path
     const link = document.createElement('a');
-    link.href = 'assets/Balaji_fullstack_developer_Resume(1).pdf';
-    link.download = 'Balaji-resume.pdf';
+    link.href = 'assets/Software developer_Resume.pdf';
+    link.download = 'Balaji-Software developer-resume.pdf';
     link.click();
   };
 
@@ -61,7 +61,7 @@ const Resume = () => {
               
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">Professional Resume</h3>
-                <p className="text-gray-400">PDF Format • Updated 2025</p>
+                <p className="text-gray-400">PDF Format • Updated 2026</p>
               </div>
               
               <motion.button

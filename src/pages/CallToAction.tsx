@@ -40,8 +40,8 @@ const CallToAction = () => {
             whileTap={{ scale: 0.95 }}
             className="relative"
           >
-            <Link
-              to="/contact"
+            <a
+              href="mailto:balaji.k062004@email.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you."
               className="inline-block px-12 py-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-bold text-xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group"
             >
               <span className="relative z-10">Hire Me Now</span>
@@ -51,7 +51,7 @@ const CallToAction = () => {
                 transition={{ duration: 0.6 }}
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
               />
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
 

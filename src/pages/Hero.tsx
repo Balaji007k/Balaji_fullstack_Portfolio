@@ -73,7 +73,7 @@ const Hero = () => {
                   transition={{ duration: 0.8, delay: 0.8 }}
                   className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 sm:px-0"
                 >
-                  Full Stack Web Developer skilled in React.js, Node.js, Express.js, and MongoDB. I build responsive UIs, REST APIs, and secure backends. Passionate about clean code, great UX, and continuous learning.
+                  Aspiring Full Stack Developer skilled in Java and MERN stack, building responsive web applications with React.js and developing REST APIs using Spring Boot, Node.js, MySQL, and MongoDB. Passionate about backend development and clean code.
                 </motion.p>
 
                 {/* Call-to-Action Buttons */}
@@ -135,7 +135,7 @@ const Hero = () => {
                     <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                   </motion.a>
                   
-                  <a href="mailto:balaji@email.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you.">
+                  <a href="mailto:balaji.k062004@gmail.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you.">
                     <motion.button
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}

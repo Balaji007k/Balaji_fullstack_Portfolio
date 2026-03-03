@@ -4,34 +4,49 @@ import { PageTransition } from "../components/PageTransition";
 
 const Skills = () => {
   const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "React.js", level: 75 },
-        { name: "JavaScript", level: 75 },
-        { name: "CSS", level: 80 },
-        { name: "HTML", level: 85 },
-      ]
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", level: 70 },
-        { name: "Express.js", level: 75 },
-        { name: "Java", level: 70 },
-        { name: "MongoDB", level: 70 },
-        { name: "mySQL", level: 85 },
-      ]
-    },
-    {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git", level: 85 },
-        { name: "Figma", level: 80 },
-        // { name: "Three.js", level: 80 },
-      ]
-    }
-  ];
+  {
+    title: "Frontend Development",
+    skills: [
+      { name: "HTML", level: 85 },
+      { name: "CSS", level: 80 },
+      { name: "JavaScript", level: 75 },
+      { name: "React.js", level: 75 }
+    ]
+  },
+  {
+    title: "Backend Development",
+    skills: [
+      { name: "Core Java", level: 75 },
+      { name: "JDBC", level: 70 },
+      { name: "Servlets", level: 70 },
+      { name: "JSP", level: 65 },
+      { name: "Spring Boot", level: 70 },
+      { name: "Hibernate", level: 70 },
+      { name: "Node.js", level: 70 },
+      { name: "Express.js", level: 75 },
+      { name: "REST API", level: 75 }
+    ]
+  },
+  {
+    title: "Database",
+    skills: [
+      { name: "MySQL", level: 85 },
+      { name: "MongoDB", level: 60 },
+      { name: "Oracle SQL", level: 75 }
+    ]
+  },
+  {
+    title: "Tools & Concepts",
+    skills: [
+      { name: "Git", level: 85 },
+      { name: "GitHub", level: 85 },
+      { name: "OOP", level: 80 },
+      { name: "MVC Architecture", level: 75 },
+      { name: "Microservices", level: 65 },
+      { name: "Database Design", level: 75 }
+    ]
+  }
+];
 
   return (
     <PageTransition>

@@ -41,7 +41,7 @@ const CallToAction = () => {
             className="relative"
           >
             <a
-              href="mailto:balaji.k062004@email.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you."
+              href="mailto:balaji.k062004@gmail.com?subject=Frontend Developer Hiring&body=Hello Balaji,%0AI saw your portfolio and I am interested in hiring you."
               className="inline-block px-12 py-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white font-bold text-xl shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 relative overflow-hidden group"
             >
               <span className="relative z-10">Hire Me Now</span>
